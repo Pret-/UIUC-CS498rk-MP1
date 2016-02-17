@@ -1,10 +1,142 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
+nav {
+  background: $bgcolor-nav;
+  color: $text-color;
+  font-family: $font-primary;
+  font-weight: 700;
+  position: fixed;
+  width: 100%;
+  display: table;
+  z-index: 999;
 
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+  .menu {
+    float: right;
+  }
+
+  .container {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10vw;
+  }
+
+  ul, li {
+    display: inline;
+    padding-right: 15px;
+  }
+
+  a,
+  a:active {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: $bgcolor-primary;
+    outline: none;
+  }
+
+}
+
+nav.large {
+  font-size: 1.75em;
+  height: 100px;
+
+}
+nav.small {
+  font-size: 1.5em;
+}
+
+header {
+
+  text-align: center;
+  color: $text-color;
+  z-index: 0;
+
+  .container {
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+  .name {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: $font-primary;
+    font-size: 4em;
+    font-weight: 700;
+    padding-bottom: 50px;
+  }
+  .subtext {
+    font-family: $font-primary;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: $font-primary;
+  font-weight: 700;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+}
+
+section {
+
+  h2 {
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 25px;
+  }
+  .container {
+    width: 750px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+section.primary {
+  color: $text-color;
+  background: $bgcolor-primary;
+}
+
+section.secondary {
+  color: $text-color2;
+  background: $bgcolor-secondary;
+}
+
+video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+}
+
+ul.carousel {
+  margin: 0 auto;
+  width: 640px;
+  height: 430px;
+  position: relative;
+  img {
+    position: absolute;
+  }
+}
+
+button {
+  padding: 0 auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .test {
