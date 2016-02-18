@@ -1,0 +1,15 @@
+@mixin columns($number) {
+  -webkit-column-count: $number;
+  -moz-column-count: $number;
+  -ms-column-count: $number;
+  column-count: $number;
+}
+
+@mixin animation($name, $duration, $iterations) {
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-iteration-count: $iterations;
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $iterations;
+}

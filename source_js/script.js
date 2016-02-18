@@ -11,6 +11,11 @@ var nav = document.getElementsByTagName("nav")[0];
 
 var carouselItems = $('#carousel').children('li');
 var currentItem = 0; // Current item the carousel shows.
+
+var modal = document.getElementById('modal');
+var modalContent1 = document.getElementById('modal-content1');
+var modalContent2 = document.getElementById('modal-content2');
+var modalContent3 = document.getElementById('modal-content3');
 /*
 var divs = document.getElementsByTagName('div');
 for(var i=0; i<divs.length; i++) {
@@ -44,7 +49,6 @@ function smoothScrolling() {
 function carousel() {
     var speed = 400;
     carouselItems.fadeOut(speed).eq(currentItem).fadeIn(speed);
-    console.log(currentItem);
 }
 
 // Indicates the position in the document by focusing the menu link.
@@ -73,23 +77,45 @@ function positionIndicator() {
     }
 }
 
+function movePrev() {
+    currentItem--;
+    if( currentItem < 0 ) {
+        currentItem = carouselItems.length - 1;
+    }
+    carousel();
+}
+
+function moveNext() {
+    currentItem++;
+    if( currentItem > carouselItems.length - 1 ) {
+        currentItem = 0;
+    }
+    carousel();
+}
+
 // Run when the document is ready.
 $(function() {
     smoothScrolling();
 
     $("#prev").click(function() {
-        currentItem--;
-        if( currentItem < 0 ) {
-            currentItem = carouselItems.length - 1;
-        }
-        carousel();
+        movePrev();
     })
     $("#next").click(function() {
-        currentItem++;
-        if( currentItem > carouselItems.length - 1 ) {
-            currentItem = 0;
-        }
-        carousel();
+        moveNext();
+    })
+    moveNext();
+
+    $("#modal-button1").click(function() {
+        modal.style.display = "block";
+        modalContent1.style.display = "block";
+    })
+    $("#modal-button2").click(function() {
+        modal.style.display = "block";
+        modalContent2.style.display = "block";
+    })
+    $("#modal-button3").click(function() {
+        modal.style.display = "block";
+        modalContent3.style.display = "block";
     })
 });
 
@@ -97,3 +123,12 @@ $(function() {
 $( document ).scroll( function() {
     positionIndicator();
 });
+
+window.onclick = function(event) {
+   if( event.target == modal ) {
+       modal.style.display = "none";
+       modalContent1.style.display = "none";
+       modalContent2.style.display = "none";
+       modalContent3.style.display = "none";
+   }
+};

@@ -3,21 +3,26 @@ Code/Reading Sources:
 Inspiration: http://blackrockdigital.github.io/startbootstrap-freelancer/
 Blue Motion Background Video: https://www.youtube.com/watch?v=X-dMOvEOQiM&ab_channel=SalCardinale
 Kitten Pictures CC0 Public Domain from: https://pixabay.com/en/users/rihaij-2145/
+Blue Landscape Picture CC0 Public Domain from: https://pixabay.com/en/mountains-passes-clouds-mist-haze-863474/
+Modal: http://www.w3schools.com/howto/howto_css_modals.asp
+CSS3 Animations: http://www.w3schools.com/css/css3_animations.asp
 
 -->
 
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MP1 Starter</title>
-  <link rel="stylesheet" href="css/styles.css">
+	<link rel='shortcut icon' href='media/myfavicon.ico' type='image/x-icon' />
+<meta charset="UTF-8">
+	<title>MP1 Starter</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!-- Font Awesome -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body id="top">
 
   <!-- Nav bar -->
-  <nav class="large" id="navbar">
+	<nav class="large" id="navbar">
     <div class="container">
 
       <a name="top" class="scroll" href="#top">Michael Wojciak</a>
@@ -56,28 +61,40 @@ Kitten Pictures CC0 Public Domain from: https://pixabay.com/en/users/rihaij-2145
         Ante magna phasellus sem. Ac quis volutpat et, sed eu. Sapien velit ultrices blandit, at nunc bibendum nunc, vehicula magna sit vitae ligula. Dictum mauris cum libero, leo pulvinar amet phasellus, tempus sed lectus. Orci posuere est pharetra amet porttitor pulvinar, eleifend eu, pede cras dui eu ultrices. Imperdiet molestias curabitur, eleifend purus sem libero, vivamus ipsum, vestibulum tempor posuere in amet risus.
         Leo massa sit in duis ante leo, condimentum massa orci dolorum fusce pellentesque venenatis, elit pulvinar nec at nulla a, donec sodales vestibulum a, praesent ut. Ut tincidunt enim habitasse hac, curabitur convallis odio a mauris augue neque, commodo sollicitudin morbi at ligula nibh ultrices, amet interdum lorem etiam, convallis nibh elit tempus nulla vehicula turpis. Duis eros, hymenaeos sodales, in nec vel dui volutpat. Tortor nulla. Dolor quia. Amet aenean quis, sollicitudin sed porta nullam mauris sed, ut magna feugiat auctor amet mollis, proin dapibus orci, interdum ultricies metus quis suspendisse. Lacinia nulla phasellus vehicula, donec numquam sed est, rerum aliquam. Risus est tristique sit eu dolorum, proin dignissim tellus, diam quis ad dolor. Erat turpis non commodo consectetuer, eu augue facilisis, nulla mus risus auctor wisi vivamus. Aliquam sapien id laudantium urna bibendum ante, tortor ligula eget tellus, tincidunt eget libero in rutrum, sociis enim porta rutrum proin diam semper.
         Quis tellus orci est mollis suscipit, inceptos arcu et faucibus. Id vel torquent semper, libero orci purus, nullam vitae tincidunt ultricies magna enim eget, faucibus luctus qui, rhoncus viverra faucibus lorem eos. Sit quis quam tortor. Ipsum sapien erat porttitor lacus et in, magna ullamcorper lorem turpis sit, odio id risus vivamus bibendum, in egestas velit feugiat molestie ornare. Vitae in nibh varius tenetur saepe sit, vel posuere posuere.</p>
-      <ul class="carousel" id="carousel">
-        <li><img src="media/kitten1.jpg" /></li>
-        <li><img src="media/kitten2.jpg" /></li>
-        <li><img src="media/kitten3.jpg" /></li>
-      </ul>
       <div class="container">
-        <button id="prev"><</button>
-        <button id="next">></button>
+        <button id="prev"><<</button>
+        <ul class="carousel" id="carousel">
+          <li><img id="modal-button1" src="media/kitten1.jpg" /></li>
+          <li><img id="modal-button2" src="media/kitten2.jpg" /></li>
+          <li><img id="modal-button3" src="media/kitten3.jpg" /></li>
+        </ul>
+        <button id="next">>></button>
       </div>
-
     </div>
   </section>
+
+  <div id="modal" class="modal">
+    <img id="modal-content1" src="media/kitten1.jpg" />
+    <img id="modal-content2" src="media/kitten2.jpg" />
+    <img id="modal-content3" src="media/kitten3.jpg" />
+  </div>
 
   <section class="primary" id="projects">
     <div class="container">
       <h2>Projects</h2>
-      <p>Lorem ipsum dolor sit amet, ac interdum fermentum facilisi, justo consequat eros integer. Nulla luctus aenean sit metus ac, faucibus ac quis class eget amet. Libero ante amet lacinia pellentesque et, ac venenatis quis, nunc lectus, accumsan vestibulum aliquam vel ipsum, animi nec est accumsan aliquam. Senectus nibh ut porta massa vestibulum magna, est dignissim, vel ultrices sed per sed. Malesuada nonummy netus perspiciatis pharetra pellentesque velit. Euismod vel nascetur non, erat quis est perferendis nulla morbi, aliquam aenean nunc id vitae vitae. Vestibulum in euismod. Nulla proin mollis mi. Faucibus non, lacinia suspendisse mollis ut venenatis. Sociosqu eu nulla sit esse, amet in posuere eros wisi elementum.
-        Ante magna phasellus sem. Ac quis volutpat et, sed eu. Sapien velit ultrices blandit, at nunc bibendum nunc, vehicula magna sit vitae ligula. Dictum mauris cum libero, leo pulvinar amet phasellus, tempus sed lectus. Orci posuere est pharetra amet porttitor pulvinar, eleifend eu, pede cras dui eu ultrices. Imperdiet molestias curabitur, eleifend purus sem libero, vivamus ipsum, vestibulum tempor posuere in amet risus.
-        Leo massa sit in duis ante leo, condimentum massa orci dolorum fusce pellentesque venenatis, elit pulvinar nec at nulla a, donec sodales vestibulum a, praesent ut. Ut tincidunt enim habitasse hac, curabitur convallis odio a mauris augue neque, commodo sollicitudin morbi at ligula nibh ultrices, amet interdum lorem etiam, convallis nibh elit tempus nulla vehicula turpis. Duis eros, hymenaeos sodales, in nec vel dui volutpat. Tortor nulla. Dolor quia. Amet aenean quis, sollicitudin sed porta nullam mauris sed, ut magna feugiat auctor amet mollis, proin dapibus orci, interdum ultricies metus quis suspendisse. Lacinia nulla phasellus vehicula, donec numquam sed est, rerum aliquam. Risus est tristique sit eu dolorum, proin dignissim tellus, diam quis ad dolor. Erat turpis non commodo consectetuer, eu augue facilisis, nulla mus risus auctor wisi vivamus. Aliquam sapien id laudantium urna bibendum ante, tortor ligula eget tellus, tincidunt eget libero in rutrum, sociis enim porta rutrum proin diam semper.
-        Quis tellus orci est mollis suscipit, inceptos arcu et faucibus. Id vel torquent semper, libero orci purus, nullam vitae tincidunt ultricies magna enim eget, faucibus luctus qui, rhoncus viverra faucibus lorem eos. Sit quis quam tortor. Ipsum sapien erat porttitor lacus et in, magna ullamcorper lorem turpis sit, odio id risus vivamus bibendum, in egestas velit feugiat molestie ornare. Vitae in nibh varius tenetur saepe sit, vel posuere posuere.</p>
+      <div class="columns">
+        <p>Lorem ipsum dolor sit amet, ac interdum fermentum facilisi, justo consequat eros integer. Nulla luctus aenean sit metus ac, faucibus ac quis class eget amet. Libero ante amet lacinia pellentesque et, ac venenatis quis, nunc lectus, accumsan vestibulum aliquam vel ipsum, animi nec est accumsan aliquam. Senectus nibh ut porta massa vestibulum magna, est dignissim, vel ultrices sed per sed. Malesuada nonummy netus perspiciatis pharetra pellentesque velit. Euismod vel nascetur non, erat quis est perferendis nulla morbi, aliquam aenean nunc id vitae vitae. Vestibulum in euismod. Nulla proin mollis mi. Faucibus non, lacinia suspendisse mollis ut venenatis. Sociosqu eu nulla sit esse, amet in posuere eros wisi elementum.
+          Ante magna phasellus sem. Ac quis volutpat et, sed eu. Sapien velit ultrices blandit, at nunc bibendum nunc, vehicula magna sit vitae ligula. Dictum mauris cum libero, leo pulvinar amet phasellus, tempus sed lectus. Orci posuere est pharetra amet porttitor pulvinar, eleifend eu, pede cras dui eu ultrices. Imperdiet molestias curabitur, eleifend purus sem libero, vivamus ipsum, vestibulum tempor posuere in amet risus.
+          Leo massa sit in duis ante leo, condimentum massa orci dolorum fusce pellentesque venenatis, elit pulvinar nec at nulla a, donec sodales vestibulum a, praesent ut. Ut tincidunt enim habitasse hac, curabitur convallis odio a mauris augue neque, commodo sollicitudin morbi at ligula nibh ultrices, amet interdum lorem etiam, convallis nibh elit tempus nulla vehicula turpis. Duis eros, hymenaeos sodales, in nec vel dui volutpat. Tortor nulla. Dolor quia. Amet aenean quis, sollicitudin sed porta nullam mauris sed, ut magna feugiat auctor amet mollis, proin dapibus orci, interdum ultricies metus quis suspendisse. Lacinia nulla phasellus vehicula, donec numquam sed est, rerum aliquam. Risus est tristique sit eu dolorum, proin dignissim tellus, diam quis ad dolor. Erat turpis non commodo consectetuer, eu augue facilisis, nulla mus risus auctor wisi vivamus. Aliquam sapien id laudantium urna bibendum ante, tortor ligula eget tellus, tincidunt eget libero in rutrum, sociis enim porta rutrum proin diam semper.
+          Quis tellus orci est mollis suscipit, inceptos arcu et faucibus. Id vel torquent semper, libero orci purus, nullam vitae tincidunt ultricies magna enim eget, faucibus luctus qui, rhoncus viverra faucibus lorem eos. Sit quis quam tortor. Ipsum sapien erat porttitor lacus et in, magna ullamcorper lorem turpis sit, odio id risus vivamus bibendum, in egestas velit feugiat molestie ornare. Vitae in nibh varius tenetur saepe sit, vel posuere posuere.</p>
+      </div>
     </div>
   </section>
+
+  <div class="animation"></div>
+  <div class="backgroundImage">
+	  <img src="media/mountains.jpg"/>
+  </div>
 
   <section class="secondary" id="contact">
     <div class="container">
@@ -90,9 +107,11 @@ Kitten Pictures CC0 Public Domain from: https://pixabay.com/en/users/rihaij-2145
   </section>
 
   <footer>
-    <div class="container">
-
-    </div>
+	  <div class="container">
+	    <i class="fa fa-facebook fa-lg"></i>
+		  <i class="fa fa-twitter fa-lg"></i>
+		  <i class="fa fa-linkedin fa-lg"></i>
+	  </div>
   </footer>
 
   <script src="lib/jquery-2.1.3.min/index.js"></script>
